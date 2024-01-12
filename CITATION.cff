@@ -1,0 +1,41 @@
+
+cff-version: 1.2.0
+title: LabSim
+message: >-
+  Play around with dangerous elements and chemicals in an
+  advanced laboratory. All without the laboratory,
+  experience or risking your life.
+type: software
+authors:
+  - given-names: Eshaan
+    family-names: Patel
+    name-particle: B.
+    email: eshaanbhargavpatel@gmail.com
+    orcid: 'https://orcid.org/0009-0003-8149-5673'
+    affiliation: 'CEO, Aeonic Corporation'
+repository-code: 'https://github.com/ebp012/labsim'
+url: 'https://labsim.aeonic.eu.org/'
+abstract: >-
+  LabSim is a virtual laboratory software. Conduct
+  experiments and play with dangerous elements. All without
+  risking your life or getting a physical laboratory. An
+  educational game where you can learn for class but also do
+  for fun. Oddly satisfying!
+keywords:
+  - science
+  - laboratory
+  - lab
+  - chemistry
+  - study
+  - game
+  - falling sand
+  - simulator
+  - gizmo
+  - online laboratory
+  - easy to use
+license: MIT
+commit: The Salty Update
+version: 3.0
+stable: 3.0
+unstable: 3.1
+date-released: '2023-12-15'

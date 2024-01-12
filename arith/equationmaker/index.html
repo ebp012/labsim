@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Neutron Arith (alpha 0.1)</title>
+		<style>
+			* {
+				font-family: futura;
+				color: white;
+			}
+			button, input {
+				background-color: black;
+				border: 1px inset white;
+			}
+			html {
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<p id='ymxb' style='position: fixed; top: 20px;'>Slope Intercept appears here</p>
+			<div style='height: 42px;'></div>
+			<h1>Choose conversion: <button>Point Slope to Slope Intercept</button></h1>
+			
+			<p>Slope-Intercept Form</p>
+			<input type='text' id='yint1' placeholder='Y-intercept'/><input type='text' id='slope1' placeholder='Slope'/><button onclick="submitSlopeFunction();">Submit</button>
+			
+		</center>
+		<script>
+			/*
+	 			y-(-2)=-4/7(x-2)
+		 	  y-(-2)=-4/7x - -8/7
+			  y     =-4/7x - 6/7
+
+
+				y-y1=m(x-x1)
+				y-y1=mx-mx1
+				y		=mx-(mx1+y1)
+			*/
+			var ans;
+			var ansZone = document.getElementById("ymxb")
+			function submitSlopeFunction() {
+				var b1=document.getElementById("yint1");
+				var m1=document.getElementById("slope1");
+				var b2 = x1.value; var b3 = b2.toString();
+				var m2 = x2.value; var m3 = m2.toString();
+				ans = "y = " + m2 + "x + " + b2;
+				ansZone.innerText = ans;
+			}
+		</script>
+	</body>
+</html>
