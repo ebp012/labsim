@@ -15631,7 +15631,6 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 
 							<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script><script>
 							var mcIsOpen = true;
-							var labTran = true;
 							function toggleMc() {
 								if (mcIsOpen==false) {
 									document.getElementById("missionControl").style.display="block";
@@ -15639,16 +15638,6 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 								}
 								else {
 									document.getElementById("missionControl").style.display="none";
-									mcIsOpen=false;
-								}
-							}
-							function toggleLt() {
-								if (labTran==false) {
-									document.getElementById("labTran").style.display="block";
-									labTran=true;
-								}
-								else {
-									document.getElementById("labTran").style.display="none";
 									mcIsOpen=false;
 								}
 							}
