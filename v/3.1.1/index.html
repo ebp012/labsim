@@ -13929,7 +13929,7 @@ runAfterLoad(function() {
 						var tjk = 1;
 						stats += "<span id='stat-pixels' class='stat'>" + currentPixels.length+"pixels&nbsp;&bull;</span>";
 					//stats += "<span id='stat-tps' class='stat'>Maximum FPS: " + tps+" fps&nbsp;&bull;</span>";
-						stats += '<span id="stat-tps" class="stat">Aeonic LabSim 3.1 Beta (E23n3t0pa)&nbsp;&bull;</span>';
+						stats += '<span id="stat-tps" class="stat">Aeonic LabSim 3.1.1 Public Release (E23n1t0pr)&nbsp;&bull;</span>';
 						//stats += "<span id='stat-ticks' class='stat'>" + pixelTicks+"</span>";
 						if (typeof pixelMap == 'undefined') { return; }
 						if (pixelMap[mousePos.x] != undefined  ) {
@@ -15163,21 +15163,12 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				mouseSize -= 2;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
-			else if (commandEntered == "{size=minimal}") {
+			else if (commandEntered == "{size=min}") {
 				mouseSize =1;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
-			else if (commandEntered == "{size=maximal}") {
+			else if (commandEntered == "{size=max}") {
 				mouseSize =150;if (mouseSize < 1) { mouseSize = 1; };focusGame();
-				focusGame();
-			}
-
-			else if (commandEntered == "{size=low}") {
-				mouseSize -= 2;if (mouseSize < 1) { mouseSize = 1; };focusGame();
-				focusGame();
-			}
-			else if (commandEntered == "{repeat=size=low}") {
-				mouseSize -= 4;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
 			else if (commandEntered == "{loop=size=low}") {
@@ -15427,11 +15418,11 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				commandConsole.classList.toggle("cmdConsole", isExpanded);
 		}
 	</script>
-	<div id='commandContainer'>
+	<div id='commandContainer labTran'>
 		<span class="caret" onclick="toggleExpand();">&#9654;</span>
 		<span id='commandBlock' contenteditable>{}</span>
 		<button onclick='doCmd();' id='dobtn'>Do</button>
-		<div id='cmdConsole' style='display: none;'>Labs Alpha 1.5</div>
+		<div id='cmdConsole' style='display: none;'>LabTran Alpha 1.6</div>
 	</div>
 	<style>
 		#commandContainer {
@@ -15638,7 +15629,9 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 
 							<button id="modsButton" title="Brings up the plug-ins screen" class="controlButton" onclick='showModManager();' onmouseout='document.getElementById("pluginId").style.display="none";' onmouseover='document.getElementById("pluginId").style.display="inline-block";' on="false"><i class='fa fa-puzzle-piece'></i><span id='pluginId' style='display:none;'>&nbsp;<i>Mods</i></span></button>
 
-							<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script><script>var mcIsOpen = true;
+							<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script><script>
+							var mcIsOpen = true;
+							var labTran = true;
 							function toggleMc() {
 								if (mcIsOpen==false) {
 									document.getElementById("missionControl").style.display="block";
@@ -15649,9 +15642,21 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 									mcIsOpen=false;
 								}
 							}
+							function toggleLt() {
+								if (labTran==false) {
+									document.getElementById("labTran").style.display="block";
+									labTran=true;
+								}
+								else {
+									document.getElementById("labTran").style.display="none";
+									mcIsOpen=false;
+								}
+							}
 							</script>
 							<button id="missionControlButton" title="Opens up Mission Control" class="controlButton" onclick='toggleMc();' onmouseout='document.getElementById("misconId").style.display="none";' onmouseover='document.getElementById("misconId").style.display="inline-block";' on="false"><i class='fa fa-circle-o'></i><span id='misconId' style='display:none;'>&nbsp;<i>Mission Control</i></span></button>
 
+							<button id="codeButton" title="Opens up the LabTran IDE" class="controlButton" onclick='toggleMc();' onmouseout='document.getElementById("misconId").style.display="none";' onmouseover='document.getElementById("misconId").style.display="inline-block";' on="false"><i class='fa fa-circle-o'></i><span id='misconId' style='display:none;'>&nbsp;<i>LabTran</i></span></button>
+								
 							<button id="creditsButton" title="Shows credits for the development of LabSim" class="controlButton" onclick='document.getElementById("creditsDisplay").style.display="block";' onmouseout='document.getElementById("credId").style.display="none";' onmouseover='document.getElementById("credId").style.display="inline-block";' on="false"><i class='fa fa-id-card'></i><span id='credId' style='display:none;'>&nbsp;<i>Credits</i></span></button>
 
 <button id="elementsButton" title="Show the elements" class="controlButton fa" style='font-family: futura;' oncontextmenu="return false; myFunctionXL();" onclick='myFunctionXS();' onmouseover='document.getElementById("elementsButton").style.background-color="#01043a";' on="false">elements <i class='fa fa-angle-down'></i></button></span>
