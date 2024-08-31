@@ -1,13 +1,14 @@
 # LabSim
 LabSim is a virtual laboratory software. Conduct experiments and play with dangerous elements. All without risking your life or getting a physical laboratory. An educational game where you can learn for class but also do for fun. Oddly satisfying!<br/>
-Play for absolutely free at https://labsim.aeonic.eu.org/.
+Play for absolutely free at https://labsim.aeonic.me/. The latest version is 3.1 LTS; the latest beta release is 3.2.
 ## Security
 ### Vulnerabilities
 There are no known vulnerabilities to ever have been known or patched. If one becomes known, please reach out to me through Discord @ebp049X#9811 or Twitter @Eshaan011, as I am not always up to date.
 ### Supported versions
 The LabSim versions' support does in fact end at a certain point and does not continue going on forever as we do not have time to maintain all older versions. If not written, the end of support for a release is usually set to the end of the half of the month in which the last update to the release was made. Below is a list of when different versions end/ended support:
-* v3.1 LTS – 31 August 2025
-* v3.1 - 31 August 2024
+* v3.1.1 LTS – 31 August 2025
+* v3.1.1 - 15 September 2024
+* v3.1 - 4 January 2024
 * v3.0 - 31 December 2023
 * v2.7.2 - 15 October 2023
 * v2.7.1 - release of 2.7.2
@@ -27,7 +28,7 @@ The LabSim versions' support does in fact end at a certain point and does not co
 * v1.6.1/LTS - 28 February 2023
 * v1.6.0 - release of 1.6.1/LTS or 31 December 2022
 * v1.5 - release of 1.6.0
-* v1.4 - release of 1.5 or 30 June 2022
+* v1.4 - 30 June 2022
 * v1.3 and below - unsupported with next release
 ## Legal
 LabSim was designed to comply with legal for the United States of America and for the Republic of India.
@@ -37,4 +38,4 @@ LabSim is licensed under the MIT License. The code itself is open source, and yo
 LabSim was designed not to collect data. However, we are attempting to install a system to track user metrics through Yandex Metrika, although this is not fully operational yet. Some information may still be collected by Yandex, however. Read the Terms of Service, Cookie Policy, and Privacy Policy on Aeonic's web site.
 ### Credits
 LabSim was originally made as a collection of existing Sandboxels mod called Proboxels. Later, a mod named Turtleguineapigs was fully merged into Proboxels. The creators of Turtleguineapigs joined Aeonic, then known as E11. They came up with the name LabSim, and designed the original logo.
-The creators of LabSim shall give credit to R74n, the original creator of Sandboxels. LabSim is a fork of Sandboxels version 1.4.
+The creators of LabSim shall give credit to R74n, the original creator of Sandboxels. **LabSim is a fork of Sandboxels version 1.4.**
