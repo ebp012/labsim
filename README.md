@@ -14,7 +14,7 @@ The LabSim versions' support does in fact end at a certain point and does not co
 * v2.7.1 - release of 2.7.2
 * v2.7.0 - release of 2.7.1
 * v2.6 - 15 June 2023
-* v2.5 LTS - 31 August 2024
+* v2.5 LTS - 30 June 2023
 * v2.5 - 30 April 2023
 * v2.4 - 31 March 2023
 * v2.3 LTS - 31 May 2023
