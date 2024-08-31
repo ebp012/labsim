@@ -15196,7 +15196,7 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				alert(alertText);
 				focusGame();
 			}
-			else if (commandEntered.startsWith('{alert:"') && commandEntered.endsWith('"}')) {
+			else if (commandEntered.startsWith("{alert:'") && commandEntered.endsWith("'}")) {
 				// Extract the text for the alert box
 				var alertText = commandEntered.substring(7, commandEntered.length - 2);
 				// Check if the text contains a mathematical expression
