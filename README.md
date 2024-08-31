@@ -6,13 +6,14 @@ Play for absolutely free at https://labsim.aeonic.eu.org/.
 There are no known vulnerabilities to ever have been known or patched. If one becomes known, please reach out to me through Discord @ebp049X#9811 or Twitter @Eshaan011, as I am not always up to date.
 ### Supported versions
 The LabSim versions' support does in fact end at a certain point and does not continue going on forever as we do not have time to maintain all older versions. If not written, the end of support for a release is usually set to the end of the half of the month in which the last update to the release was made. Below is a list of when different versions end/ended support:
-* v3.1 - 15 March 2024
+* v3.1 LTS – 31 August 2025
+* v3.1 - 31 August 2024
 * v3.0 - 31 December 2023
 * v2.7.2 - 15 October 2023
 * v2.7.1 - release of 2.7.2
 * v2.7.0 - release of 2.7.1
 * v2.6 - 15 June 2023
-* v2.5 LTS - 30 June 2023
+* v2.5 LTS - 31 August 2024
 * v2.5 - 30 April 2023
 * v2.4 - 31 March 2023
 * v2.3 LTS - 31 May 2023
