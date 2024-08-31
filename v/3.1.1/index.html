@@ -15111,6 +15111,12 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 	}
 }
 	</style>
+	<div id='commandContainer'>
+		<span class="caret" onclick="toggleExpand();">&#9654;</span>
+		<span id='commandBlock' contenteditable>{}</span>
+		<button onclick='doCmd();' id='dobtn'>Do</button>
+		<div id='cmdConsole' style='display: none;'>LabTran Alpha 1.6</div>
+	</div>
 	<script>
 		var calcResult;
 		var focusStats;
@@ -15427,12 +15433,6 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 			console.log(inputText);
 		}
 	</script>
-	<div id='commandContainer'>
-		<span class="caret" onclick="toggleExpand();">&#9654;</span>
-		<span id='commandBlock' contenteditable>{}</span>
-		<button onclick='doCmd();' id='dobtn'>Do</button>
-		<div id='cmdConsole' style='display: none;'>LabTran Alpha 1.6</div>
-	</div>
 	<style>
 		#commandContainer {
 				display: flex;
