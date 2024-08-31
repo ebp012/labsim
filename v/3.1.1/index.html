@@ -15164,12 +15164,21 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				mouseSize -= 2;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
-			else if (commandEntered == "{size=min}") {
+			else if (commandEntered == "{size=minimal}") {
 				mouseSize =1;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
-			else if (commandEntered == "{size=max}") {
+			else if (commandEntered == "{size=maximal}") {
 				mouseSize =150;if (mouseSize < 1) { mouseSize = 1; };focusGame();
+				focusGame();
+			}
+
+			else if (commandEntered == "{size=low}") {
+				mouseSize -= 2;if (mouseSize < 1) { mouseSize = 1; };focusGame();
+				focusGame();
+			}
+			else if (commandEntered == "{repeat=size=low}") {
+				mouseSize -= 4;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
 			else if (commandEntered == "{loop=size=low}") {
@@ -15181,22 +15190,18 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				mouseSize += 2;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
-			if (commandEntered.startsWith('{alert:"') && commandEntered.endsWith('"}') {
-    			// Extract the text for the alert box
-				var alertText = commandEntered.substring(7, commandEntered.length - 2);
-				alert(alertText);
-				focusGame();
-			}
-			if (commandEntered.startsWith("{alert:'") && commandEntered.endsWith("'}") {
-    			// Extract the text for the alert box
-				var alertText = commandEntered.substring(7, commandEntered.length - 2);
-				alert(alertText);
-				focusGame();
-			}
 			else if (commandEntered == "{alert}") {
-				alert(); // Default alert with no text
+				alert();
 				focusGame();
-  			}
+			}
+			else if (commandEntered == "{prompt}") {
+				prompt();
+				focusGame();
+			}
+			else if (commandEntered == "{confirm}") {
+				confirm();
+				focusGame();
+			}
 			else if (commandEntered == "{prompt=addNote}") {
 				addNote();
 				focusGame();
@@ -15422,20 +15427,12 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				var commandConsole = document.getElementById("cmdConsole");
 				commandConsole.classList.toggle("cmdConsole", isExpanded);
 		}
-		/*
-		function getInput() {
-			const commandBlock = document.getElementById("commandBlock");
-			const inputText = commandBlock.textContent; // Or commandBlock.innerHTML for HTML content
-			console.log(inputText);
-		}
-  		*/
 	</script>
-
 	<div id='commandContainer'>
 		<span class="caret" onclick="toggleExpand();">&#9654;</span>
 		<span id='commandBlock' contenteditable>{}</span>
 		<button onclick='doCmd();' id='dobtn'>Do</button>
-		<div id='cmdConsole' style='display: none;'>LabTran Alpha 1.6</div>
+		<div id='cmdConsole' style='display: none;'>Labs Alpha 1.6</div>
 	</div>
 
 
