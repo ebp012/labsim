@@ -15190,16 +15190,14 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				mouseSize += 2;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
+			if (commandEntered.startsWith('{alert:"') && commandEntered.endsWith('"}') {
+				// Extract the text for the alert box
+				var alertText = commandEntered.substring(7, commandEntered.length - 2);
+				alert(alertText);
+				focusGame();
+			}
 			else if (commandEntered == "{alert}") {
 				alert();
-				focusGame();
-			}
-			else if (commandEntered == "{prompt}") {
-				prompt();
-				focusGame();
-			}
-			else if (commandEntered == "{confirm}") {
-				confirm();
 				focusGame();
 			}
 			else if (commandEntered == "{prompt=addNote}") {
