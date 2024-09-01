@@ -15190,58 +15190,7 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				mouseSize += 2;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
-			else if (commandEntered.startsWith('{alert:"') && commandEntered.endsWith('"}') {
-				// Extract the text for the alert box
-				var alertText = commandEntered.substring(7, commandEntered.length - 2);
-				alert(alertText);
-				focusGame();
-			}
-			else if (commandEntered.startsWith("{alert:'") && commandEntered.endsWith("'}")) {
-				// Extract the text for the alert box
-				var alertText = commandEntered.substring(7, commandEntered.length - 2);
-				// Check if the text contains a mathematical expression
-				var match = alertText.match(/^'([+\-*/^%_\\!]+)'\s*(.*)$/);
-				if (match) {
-					// Parse the expression
-					var operator = match[1];
-					var operand = match[2];
-					// Evaluate the expression
-					switch (operator) {
-						case '+':
-							result = eval(operand);
-							break;
-						case '-':
-							result = eval(operand);
-							break;
-						case '*':
-							result = eval(operand);
-							break;
-						case '/':
-							result = eval(operand);
-							break;
-						case '^':
-							result = Math.pow(eval(operand));
-							break;
-						case '%':
-							result = eval(operand) % eval(operand);
-							break;
-						case '_':
-							result = Math.log(eval(operand));
-							break;
-							case '\\':
-							result = Math.pow(eval(operand), 1 / eval(operand));
-							break;
-						case '!':
-							result = factorial(eval(operand));
-							break;
-						default:
-							result = "Invalid operator";
-			   	}
-				// Display the result
-				alertText = "Result: " + result;}
-				alert(alertText);
-				focusGame();
-			}
+			
 			else if (commandEntered == "{alert}") {
 				alert();
 				focusGame();
