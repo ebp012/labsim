@@ -16147,15 +16147,14 @@ function dragElement(elmnt) {
 						</p>
 					
 						<p><strong>Dark mode</strong>:&nbsp;
-							<button onclick="setTheme('ocean')" style='background-image: linear-gradient(to right, #000027, #000027, #000000, #000444);'><abbr >Abyssal Zone</abbr></button>&nbsp;&bull;&nbsp;
-							<button onclick="setTheme('space')" style='background-image: linear-gradient(to right, #00000F, #000000, #00000F, #00000F);'><abbr >Outer Space</abbr></button>&nbsp;&bull;&nbsp;
-							<button onclick="setTheme('bloodred')" style='background-image: linear-gradient(to right, #00000F, #000000, #00000F, #00000F);'><abbr title='Warning: might be a little gory!'>Blood Red</abbr></button>&nbsp;&bull;&nbsp;
+							<button onclick="setTheme('ocean')" style='background-image: linear-gradient(to right, #000027, #000027, #000000, #000444); color: white;'><abbr >Abyssal Zone</abbr></button>&nbsp;&bull;&nbsp;
+							<button onclick="setTheme('space')" style='background-image: linear-gradient(to right, #00000F, #000000, #00000F, #00000F); color: white;'><abbr >Outer Space</abbr></button>&nbsp;&bull;&nbsp;
+							<button onclick="setTheme('bloodred')" style='background-image: linear-gradient(to right, #330066, #330066, #8f0116, #BB000B); color: white;'><abbr title='Warning: might be a little gory!'>Blood Red</abbr></button>&nbsp;&bull;&nbsp;
 						</p>
 						
 					<button id="shadersButton" onclick="toggleShaders()">Toggle Shaders (slow)</button>
 						<span class="menuTitle">Controls</span>
 						<strong>vapours</strong><br/>
-						<p><b>Air</b><span onclick='elements.oxygen.color="#99c7ff";'>Show colour</span>&bull;<span onclick='elements.oxygen.color="#000000";'>Hide colour</span></p>
 						<div class="menuText" style="padding-top:1em">
 										Units <select onchange="setSetting('units',this.value);">
 												<option value="m" selected>Metric (INTL)</option>
@@ -16316,15 +16315,15 @@ function dragElement(elmnt) {
 											commandContainer.style.backgroundColor="#383838";
 											commandBlock.style.backgroundColor="#383838";
 									} else if (theme === "bloodred") {
-											alert("incomplete");
-											appMain.style.background = "#00000F";
-											gameDiv.style.background = "#000000";
-											canvasDiv.style.background = "#00000F";
+											appMain.style.background = "#330066";
+											gameDiv.style.background = "#8f0116";
+											canvasDiv.style.background = "#330066";
 											appMain.style.color = "white";
 											gameDiv.style.color = "white";
 											webkitTheme.content = "#00000F";
 											commandContainer.style.backgroundColor="#080808";
 											commandBlock.style.backgroundColor="#080808";
+
 									}
 
 
