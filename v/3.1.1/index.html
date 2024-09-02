@@ -15195,6 +15195,11 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				alert();
 				focusGame();
 			}
+			else if (commandEntered.startsWith('{alert:"')) {
+				var alertText = commandEntered.substring(7, commandEntered.length - 2);
+				alert(alertText);
+				focusGame();
+			}
 			else if (commandEntered == "{prompt=addNote}") {
 				addNote();
 				focusGame();
@@ -15426,7 +15431,7 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 		<span id='commandBlock' contenteditable>{}</span>
 		<button onclick='doCmd();' id='dobtn'>Do</button>
 		<div id='cmdConsole'>
-			<h4>Abyssal Alpha 1.6 Console</h4>
+			<h4>Void Alpha 1.6 Console</h4>
 			<div id='abyssalConsole'>
 			</div>
 		</div>
