@@ -15191,13 +15191,13 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				focusGame();
 			}
 			
-			else if (commandEntered == "{alert}") {
+			else if (commandEntered == "{print}") {
 				alert();
 				focusGame();
 			}
-			else if (commandEntered.startsWith('{alert:"')) {
-				var alertText = commandEntered.substring(7, commandEntered.length - 2);
-				alert(alertText);
+			else if (commandEntered.startsWith('{print:"')) {
+				var alertText = commandEntered.substring(8, commandEntered.length - 2);
+				console.log(alertText);
 				focusGame();
 			}
 			else if (commandEntered == "{prompt=addNote}") {
