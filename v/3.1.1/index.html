@@ -15196,10 +15196,20 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				alert();
 				focusGame();
 			}
-			else if (commandEntered.startsWith('print: "') || commandEntered.startsWith('{print:"')) {
-				commandEnteredA = commandEntered.replace(/(:)\s+/g, "$1");
-				commandEnteredB = commandEnteredA.replace(/([^\\])\\/g, "$1");
-				var alertText = commandEnteredB.substring(8, commandEnteredB.length - 1);
+			else if (commandEntered == "puts") {
+				alert();
+				focusGame();
+			}
+			else if (commandEntered.startsWith('print "')) {
+				var commandEnteredA = commandEntered.replace(/([^\\])\\/g, "$1");
+				var alertText = commandEnteredA.substring(7, commandEnteredA.length - 1);
+				console.log(alertText);
+				focusGame();
+			}
+			else if (commandEntered.startsWith('puts "')) {
+				var commandEnteredA = commandEntered.replace(/([^\\])\\/g, "$1");
+				var alertText = commandEnteredB.substring(7, commandEnteredB.length - 1);
+				var alertTextA = alertText + "\n"; 
 				console.log(alertText);
 				focusGame();
 			}
@@ -15230,7 +15240,7 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				focusGame();
 			}
 			else if (commandEntered == "{help}") {
-				window.open("https://aeonic.miraheze.org/wiki/LabLang", "_blank");
+				window.open("http://dev.aeonic.me/void/wiki", "_blank");
 			}
 			else if (commandEntered == "{get=focus}") {
 				if (focusStats == false) {
@@ -15336,7 +15346,7 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 			document.getElementById("logobox").innerHTML=note;
 		}
 		function clearCmd() {
-			document.getElementById("commandBlock").innerHTML="{}";
+			document.getElementById("commandBlock").innerHTML="";
 		}
 		function calculateSingleTermOperation(operation, term) {
 				switch (operation) {
