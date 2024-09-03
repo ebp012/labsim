@@ -15123,34 +15123,35 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 			var settingStuffs = clearCmd();
 		}
 		function checkLabLang() { // the compiler for the Void programming language 
-			var commandEntered = document.getElementById("commandBlock").innerText;
+			var commandTyped = document.getElementById("commandBlock").innerText;
+			var commandEntered = commandTyped.replace(/([^\\])\\/g, "$1");
 			// The select command
-			if (commandEntered == "{select}") {
+			if (commandEntered == "select") {
 				chooseElementPrompt()
 				focusGame();
 			}
-			else if (commandEntered.startsWith("{select:")) {
+			else if (commandEntered.startsWith('select ""')) {
 				var elementName = commandEntered.substring(8, commandEntered.length - 1);
 				selectElement(elementName);
 				focusGame();
 			}
-			else if (commandEntered == "{select=lookup}"){
+			else if (commandEntered == "select lookup"){
 				currentElement = "lookup";
 			}
-			else if (commandEntered == "{select=tool}") {
+			else if (commandEntered == "select tool") {
 				chooseToolPrompt();
 				focusGame();
 			}
-			else if (commandEntered.startsWith("{select=tool:")) {
+			else if (commandEntered.startsWith('select tool ""')) {
 				var toolName = commandEntered.substring(13, commandEntered.length - 1);
 				selectElement(toolName);
 				focusGame();
 			}
-			else if (commandEntered == "{select=element}") {
+			else if (commandEntered == "select element") {
 				chooseElementPrompt();
 				focusGame();
 			}
-			else if (commandEntered == "{select=null}") {
+			else if (commandEntered == "select null") {
 				focusGame();
 			}
 			else if (commandEntered.startsWith("{definejs:")) {
@@ -15201,14 +15202,12 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				focusGame();
 			}
 			else if (commandEntered.startsWith('print "')) {
-				var commandEnteredA = commandEntered.replace(/([^\\])\\/g, "$1");
-				var alertText = commandEnteredA.substring(7, commandEnteredA.length - 1);
+				var alertText = commandEntered.substring(7, commandEnteredA.length - 1);
 				console.log(alertText);
 				focusGame();
 			}
 			else if (commandEntered.startsWith('puts "')) {
-				var commandEnteredA = commandEntered.replace(/([^\\])\\/g, "$1");
-				var alertText = commandEnteredB.substring(7, commandEnteredB.length - 1);
+				var alertText = commandEntered.substring(7, commandEnteredA.length - 1);
 				var alertTextA = alertText + "\n"; 
 				console.log(alertText);
 				focusGame();
