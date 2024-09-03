@@ -15192,16 +15192,21 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				focusGame();
 			}
 			
-			else if (commandEntered == "{print}") {
+			else if (commandEntered == "print") {
 				alert();
 				focusGame();
 			}
-			else if (commandEntered.startsWith('{print: "') || commandEntered.startsWith('{print:"')) {
-				var alertText = commandEntered.substring(8, commandEntered.length - 2);
+			else if (commandEntered.startsWith('print: "') || commandEntered.startsWith('{print:"')) {
+				commandEnteredA = commandEntered.replace(/(:)\s+/g, "$1");
+				commandEnteredB = commandEnteredA.replace(/([^\\])\\/g, "$1");
+				var alertText = commandEnteredB.substring(8, commandEnteredB.length - 1);
 				console.log(alertText);
 				focusGame();
 			}
-			else if (commandEntered == "{prompt=addNote}") {
+			else if (commandEntered.startsWith('#')) { // Comments
+				focusGame();
+			}
+			else if (commandEntered == "note") {
 				addNote();
 				focusGame();
 			}
