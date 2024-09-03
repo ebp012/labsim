@@ -15196,7 +15196,7 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				alert();
 				focusGame();
 			}
-			else if (commandEntered.startsWith('{print:"')) {
+			else if (commandEntered.startsWith('{print: "') || commandEntered.startsWith('{print:"')) {
 				var alertText = commandEntered.substring(8, commandEntered.length - 2);
 				console.log(alertText);
 				focusGame();
