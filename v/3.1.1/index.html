@@ -15126,96 +15126,72 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 			var commandTyped = document.getElementById("commandBlock").innerText;
 			var commandEntered = commandTyped.replace(/([^\\])\\/g, "$1");
 			// The select command
-			if (commandEntered == "select") {
+			if (commandEntered == "select()") {
 				chooseElementPrompt()
 				focusGame();
 			}
-			else if (commandEntered.startsWith('select ""')) {
-				var elementName = commandEntered.substring(8, commandEntered.length - 1);
+			else if (commandEntered.startsWith('select(')) {
+				var elementName = commandEntered.substring(7, commandEntered.length - 1);
 				selectElement(elementName);
 				focusGame();
 			}
-			else if (commandEntered == "select lookup"){
+			else if (commandEntered == "info()"){
 				currentElement = "lookup";
 			}
-			else if (commandEntered == "select tool") {
+			else if (commandEntered == 'select(&tool)') {
 				chooseToolPrompt();
 				focusGame();
 			}
-			else if (commandEntered.startsWith('select tool ""')) {
+			else if (commandEntered.startsWith('select(tool, ')) {
 				var toolName = commandEntered.substring(13, commandEntered.length - 1);
 				selectElement(toolName);
 				focusGame();
 			}
-			else if (commandEntered == "select element") {
+			else if (commandEntered == "select(&&element)") {
 				chooseElementPrompt();
 				focusGame();
 			}
-			else if (commandEntered == "select null") {
+			else if (commandEntered == "select(null)") {
 				focusGame();
 			}
 			else if (commandEntered.startsWith("{definejs:")) {
-				var parts = commandEntered.match(/\{definejs:(.*?):(.*?)\}/);
+				var parts = commandEntered.match(/\$(\w+)=(.*?)\//)
 				if (parts && parts.length === 3) {
 						var variableName = parts[1];
 						var value = parts[2];
 						window[variableName] = value;
 				}
 			}
-			else if (commandEntered == "{size=down}") {
+			else if (commandEntered == "size(-)") {
 				mouseSize -= 2;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
-			else if (commandEntered == "{size=minimal}") {
+			else if (commandEntered == "size(/)") {
 				mouseSize =1;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
-			else if (commandEntered == "{size=maximal}") {
+			else if (commandEntered == "size(*)") {
 				mouseSize =150;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
-
-			else if (commandEntered == "{size=low}") {
-				mouseSize -= 2;if (mouseSize < 1) { mouseSize = 1; };focusGame();
-				focusGame();
-			}
-			else if (commandEntered == "{repeat=size=low}") {
-				mouseSize -= 4;if (mouseSize < 1) { mouseSize = 1; };focusGame();
-				focusGame();
-			}
-			else if (commandEntered == "{loop=size=low}") {
-				mouseSize -= 6;if (mouseSize < 1) { mouseSize = 1; };focusGame();
-				focusGame();
-			}
-
-			else if (commandEntered == "{size=up}") {
+			else if (commandEntered == "size(+)") {
 				mouseSize += 2;if (mouseSize < 1) { mouseSize = 1; };focusGame();
 				focusGame();
 			}
 			
-			else if (commandEntered == "print") {
+			else if (commandEntered == "print()") {
 				alert();
 				focusGame();
 			}
-			else if (commandEntered == "puts") {
-				alert();
-				focusGame();
-			}
-			else if (commandEntered.startsWith('print "')) {
-				var alertText = commandEntered.substring(7, commandEnteredA.length - 1);
-				console.log(alertText);
-				focusGame();
-			}
-			else if (commandEntered.startsWith('puts "')) {
-				var alertText = commandEntered.substring(7, commandEnteredA.length - 1);
-				var alertTextA = alertText + "\n"; 
+			else if (commandEntered.startsWith('print("')) {
+				var alertText = commandEntered.substring(7, commandEnteredA.length - 2);
 				console.log(alertText);
 				focusGame();
 			}
 			else if (commandEntered.startsWith('#')) { // Comments
 				focusGame();
 			}
-			else if (commandEntered == "note") {
+			else if (commandEntered == "note()") {
 				addNote();
 				focusGame();
 			}
