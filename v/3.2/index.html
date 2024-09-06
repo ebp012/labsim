@@ -36,10 +36,10 @@
 <base target="_blank"/>
 
 		<meta charset="utf-8">
-		<title>LabSim</title>
+		<title>LabSim v3.2</title>
 		<meta name="description" content="Conduct experiments and play with dangerous elements. All without risking your life or getting a laboratory.">
-		<meta name="keywords" content="falling sand, elements, pixel art, simulator, powder, dangerous, nfca, lab, online lab">
-		<meta name="author" content="ebp049X">
+		<meta name="keywords" content="falling sand, elements, pixel art, simulator, powder, dangerous, nfca, lab, online lab, science, school, chemistry, biology, astronomy, physics, astrophysics, astrobiology, energy, virology, astrovirology, speculative biology, speculative chemistry, worldbuilding, tool">
+		<meta name="author" content="random.guy2840">
 		<meta name="copyright" content="R74n"><!--This is just a fork-->
 		<link href="https://fonts.googleapis.com/css?family=Futura" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,11 +47,11 @@
 		<meta name="theme-color" content="#000027" id='okok'>
 		<script>var webkitTheme=document.getElementById("okok");</script>
 		<!--Favicons-->
-		<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png?v=2">
-		<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png?v=2">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=2">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png?v=2">
 		<link rel="manifest" href="/manifest.json">
-		<link rel="mask-icon" href="icons/safari-pinned-tab.svg?v=2" color="#2167ff">
-		<link rel="shortcut icon" href="icons/favicon.ico?v=2">
+		<link rel="mask-icon" href="/icons/safari-pinned-tab.svg?v=2" color="#2167ff">
+		<link rel="shortcut icon" href="/icons/favicon.ico?v=2">
 		<meta name="msapplication-TileColor" content="#e6d577">
 		<meta name="theme-color" content="#000000">
 		<link rel="icon" href="images/Reglogo.png">
@@ -69,13 +69,13 @@
 		<meta property="og:image:type" content="image/png">
 		<meta property="og:image:alt" content="All of the popular elements put together into one image.">
 
-		<!--Twitter-->
+		<!---X--->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:description" content="An educational game where you can learn for class but also do for fun. Oddly satisfying!">
 		<meta name="twitter:title" content="LabSim">
 		<meta name="twitter:site:id" content="1436857621827530753">
-		<meta name="twitter:image" content="https://labsim-beta.ebp11.repl.co/texturecarpet.png">
-		<meta name="twitter:image:alt" content="All of the popular elements put together into one image.">
+		<meta name="twitter:image" content="/texturecarpet.png">
+		<meta name="twitter:image:alt" content="All of the popular elements put together into one image."> <!-- Broken as of 6/9/24 10:14 AM -->
 		<meta name="twitter:creator:id" content="1436857621827530753">
 
 		<!-- iOS Progressive Web App -->
@@ -113,14 +113,14 @@
 						"availability":"https://schema.org/InStock"
 					},
 					"genre": "Falling-sand game",
-					"softwareVersion":"1.2",
-					"datePublished":"2021-12-15",
+					"softwareVersion":"3.2",
+					"datePublished":"2024-09-06",
 					"dateCreated":"2021-12-15",
-					"gameTip":"https://sandboxels.r74n.com/controls.txt",
+					"gameTip":"https://web.archive.org/web/2022/sandboxels.r74n.com/controls.txt",
 					"screenshot": "texturecarpet.png",
 					"softwareRequirements": ["HTML5","BS5","ES5"],
 					"archivedAt": "https://web.archive.org/web/20211230010640000/https://labsim.ebp11.repl.co/",
-					"copyrightYear": 2023
+					"copyrightYear": 2021
 		}</script>
 
 		<script>
@@ -185,7 +185,6 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<audio src="https://timonoucitiland.ebp11.repl.co/rick.mp3" id="myAudio">Instrument Error</audio>
 		<script>
 				// If settings is in localStorage, load it. If not, create an empty object.
 				settings = localStorage.getItem("settings") ? JSON.parse(localStorage.getItem("settings")) : {};
@@ -13950,7 +13949,7 @@ runAfterLoad(function() {
 						var tjk = 1;
 						stats += "<span id='stat-pixels' class='stat'>" + currentPixels.length+"pixels&nbsp;&bull;</span>";
 					//stats += "<span id='stat-tps' class='stat'>Maximum FPS: " + tps+" fps&nbsp;&bull;</span>";
-						stats += '<span id="stat-tps" class="stat">Aeonic LabSim 3.1.1 Public Release (E24n3t0A3.1)&nbsp;&bull;</span>';
+						stats += '<span id="stat-tps" class="stat">Aeonic LabSim 3.1.1 Public Release (E24n3t2A)&nbsp;&bull;</span>';
 						//stats += "<span id='stat-ticks' class='stat'>" + pixelTicks+"</span>";
 						if (typeof pixelMap == 'undefined') { return; }
 						if (pixelMap[mousePos.x] != undefined  ) {
@@ -15143,6 +15142,14 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 			writeToConsole("Task succeded");
 			var settingStuffs = clearCmd();
 		}
+		function printVoid(text) {
+			// Print text
+			console.log(text);
+		}
+		function errVoid(text) {
+			// Error handling output
+			console.log(text);
+		}
 		function checkLabLang() { // the compiler for the Void programming language 
 			var commandTyped = document.getElementById("commandBlock").innerText;
 			var commandEntered = commandTyped.replace(/([^\\])\\/g, "$1");
@@ -15240,22 +15247,22 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 			}
 			else if (commandEntered == "{get=focus}") {
 				if (focusStats == false) {
-					alert("Focus is set to: false");
+					console.log("Focus is set to: false");
 				}
 				else if (focusStats == true) {
-					alert("Focus is set to: true");
+					console.log("Focus is set to: true");
 				}
 				else {
-					alert("ERROR: Boolean variable 'focusStats' is not defined as being true or false at (main):1:10")
+					console.log("(void)ERR: Boolean variable 'focusStats' is not defined as being true or false at (main):1:10")
 				}
 			}
-			else if (commandEntered == "{get=version}") {
-				alert("You are playing LabSim 2.7.0.");
+			else if (commandEntered == "get(version)") {
+				console.log("Void Alpha");
 			}
-			else if (commandEntered == "{get=credits}") {
+			else if (commandEntered == "get(credits)") {
 				alert("LabSim is an online laboratory simulator by Aeonic. It is written by Eshaan Bhargav Patel with small contributions by Pravar Gollamudi, Aaron D'Souza, and Brenden D'Souza.\nLabSim was made as a fork of Sandboxels (https://sandboxels.r74n.com) v1.4 by R74n (http://r74n.com/), and all of the subsequent coding from the persons mentioned above were modifications to Sandboxels.");
 			}
-			else if (commandEntered == "{get=stats}") {
+			else if (commandEntered == "get(statistics)") {
 				if (focusStats == false) {
 					allStats += "FOCUS: false\n";
 				}
@@ -15274,13 +15281,13 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 				else {
 					allStats += "FOCUS: undefined\n"
 				}
-				alert(allStats);
+				console.log(allStats);
 			}
-			else if (commandEntered == "{get}") {
-				alert("ERROR: Undefined parameter, please specify it; at (main):1:4")
+			else if (commandEntered == "get()") {
+				console.log("(void)ERR: Undefined parameter, please specify it; at (main):1:4")
 			}
 			else if (commandEntered == "{print}") {
-				alert("ERROR: Item to be gotten left undefined at (main):1:4")
+				console.log("(void)ERR: Undefined parameter, please specify it; at (main):1:4")
 			}
 			else if (commandEntered.startsWith("{#mod:")) {
 				var modUrl = commandEntered.substring(5).trim();
@@ -15312,10 +15319,10 @@ for (var k = 0; k < b0.split(" AND ").length; k++) {
 								else if (a === 4) {
 										calcResult = calculateQuaternaryOperation(t, m, n, o, p);
 								}
-								alert(calcResult);
+								printVoid(calcResult);
 						}
 						else if (a < 0 || a > 8) {
-								alert("ERROR: Invalid operand, must be between 0 and 8; ERR @ 1:8");
+								printVoid("(void)ERR: Invalid operand, must be between 0 and 8; at (main)1:8");
 						}
 				}
 				else {
